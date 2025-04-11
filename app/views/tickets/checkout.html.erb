@@ -1,0 +1,22 @@
+<h1>Book Your Tickets</h1>
+
+<div class="event-info">
+  <h2>RailsConf 2025</h2>
+  <p>Date: April 30, 2025</p>
+  <p>Location: Virtual</p>
+</div>
+
+<form id="checkout-form">
+  <label for="name">Your Name</label>
+  <input type="text" id="name" required>
+
+  <label for="email">Email Address</label>
+  <input type="email" id="email" required>
+
+  <label for="quantity">Tickets</label>
+  <input type="number" id="quantity" min="1" value="1">
+
+  <p>Total: <span id="total-price">$20</span></p>
+  <%= javascript_include_tag "checkout" %>
+  <button type="submit">Purchase</button>
+</form>

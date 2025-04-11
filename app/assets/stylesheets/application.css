@@ -1,0 +1,86 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+ #checkout-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  #checkout-form input,
+  #checkout-form button {
+    margin-bottom: 1rem;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 600px) {
+    h1 { font-size: 1.5rem; }
+  }
+
+  /* Mobile-first responsive layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: white;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-form .form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Create Your Account</h2>
+
+    <%= form_with model: @user, url: signup_path, method: :post, html: { class: "login-form" } do |f| %>
+      <div class="form-group">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, required: true, placeholder: "First Name" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, required: true, placeholder: "Last Name" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, required: true, placeholder: "you@example.com" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, required: true, minlength: 6, placeholder: "Create Password" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, required: true, minlength: 6, placeholder: "Confirm Password" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :role %>
+        <%= f.select :role, User.roles.keys.map { |r| [r.titleize, r] }, {}, required: true %>
+      </div>
+
+      <%= f.submit "Create Account", class: "login-button" %>
+    <% end %>
+  </div>
+</body>
+</html>
